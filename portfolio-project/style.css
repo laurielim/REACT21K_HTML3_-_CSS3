@@ -1,0 +1,16 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: palegoldenrod;
+  color: darkgreen;
+}
+
+h1,
+h2 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: purple;
+}
+
+img {
+  height: 300px;
+  width: 500px;
+}
