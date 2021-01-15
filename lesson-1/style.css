@@ -1,0 +1,23 @@
+body {
+  background-color: pink;
+}
+
+p {
+  color: green;
+}
+
+.blue {
+  color: blue;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+/* this is a comment */
+.yellow {
+  color: yellow;
+}
