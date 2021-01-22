@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* background-color: grey;
+  background-image: url("https://source.unsplash.com/7fSUXcU9WWI/1600x900");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover; */
+
+  background: grey url("https://source.unsplash.com/7fSUXcU9WWI/1600x900")
+    no-repeat fixed center center/cover;
+
+  color: snow;
+}
+
+h2 {
+  color: black;
+}
+
+.logo {
+  color: white;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 0;
+}
+
+header ul {
+  list-style-type: none;
+}
+
+header li {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+header li a {
+  color: orange;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+img {
+  width: 350px;
+  float: right;
+}
+
+ul {
+  list-style-type: square;
+}
+
+table {
+  background-color: cornsilk;
+  width: 100%;
+  max-width: 1000px;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: orange;
+}
+
+td,
+th {
+  border: 2px solid wheat;
+}
+
+.box {
+  width: 180px;
+  height: 180px;
+  display: inline-block;
+  margin: 10px;
+}
+
+.box-1 {
+  background-color: red;
+  border: 10px inset yellow;
+}
+
+.box-2 {
+  border-top: 10px dashed blue;
+  border-right: 10px ridge green;
+  border-bottom: 10px dotted yellow;
+  border-left: 10px groove red;
+  border-radius: 20px;
+}
+
+.box-3 {
+  width: 0;
+  height: 0;
+  border: 100px groove yellow;
+}
+
+.box-4 {
+  background-color: midnightblue;
+  border: 10px groove aqua;
+  border-radius: 50%;
+}
+
+.box-5 {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  border-width: 50px;
+  border-style: solid double;
+  border-color: green purple;
+}
+
+.box-6 {
+  background-color: royalblue;
+  background-image: url("https://source.unsplash.com/Xg_odGqg8zQ/200x200");
+  border: 10px outset teal;
+}
+
+.box-7 {
+  width: 0;
+  height: 0;
+  border-right: 100px solid transparent;
+  border-bottom: 100px ridge snow;
+  border-left: 100px solid transparent;
+}
+
+.box-8 {
+  width: 0;
+  height: 0;
+  border: 100px outset violet;
+  border-radius: 100%;
+}
