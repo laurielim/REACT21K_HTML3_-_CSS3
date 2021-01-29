@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+
+  background-color: teal;
+}
+
+h1 {
+  font-weight: 500;
+}
+
+form {
+  background-color: white;
+  width: 320px;
+  margin: 20px auto;
+  padding: 30px 20px;
+}
+
+input {
+  display: block;
+  padding: 12px;
+  border: 2px solid lightgray;
+  width: 290px;
+  margin-top: 5px;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid rgba(0, 183, 255);
+}
+
+label {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+button {
+  margin: 10px auto;
+  width: 230px;
+  height: 40px;
+  text-transform: uppercase;
+  font-weight: 500;
+  background-color: coral;
+  border: none;
+  font-size: 16px;
+}
+
+button:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: coral;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.darken:hover {
+  filter: brightness(0.9);
+}
+
+.container {
+  padding: 50px;
+}
+
+.form-input {
+  padding: 10px 0;
+}
+
+.center {
+  display: flex;
+}
+
+.white-text {
+  color: white;
+}
+
+.round-border {
+  border-radius: 5px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.sub-title {
+  font-size: 17px;
+  font-weight: 500;
+  margin-top: 15px;
+}
+
+.small-text {
+  font-size: 14px;
+}
