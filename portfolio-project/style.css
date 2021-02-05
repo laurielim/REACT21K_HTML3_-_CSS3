@@ -15,30 +15,6 @@ body {
   color: #fffafb;
 }
 
-.container {
-  width: 80%;
-  max-width: 900px;
-  margin: 50px auto;
-}
-
-section {
-  clear: both;
-  padding: 10vh 0;
-  width: 100%;
-}
-
-.alt-background {
-  background-color: #05080f;
-}
-header {
-  text-align: center;
-  background-color: #05080f00;
-  width: 100%;
-  position: fixed;
-  padding: 3vh;
-  transition: all 0.3s ease;
-}
-
 h1 {
   color: #fffafb;
   text-transform: lowercase;
@@ -48,17 +24,35 @@ h1 {
   transition: all 0.3s ease;
 }
 
+p {
+  line-height: 150%;
+  font-size: 1.2rem;
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  text-align: center;
+  background-color: #05080f00;
+  width: 100%;
+  position: fixed;
+  padding: 3vh;
+  transition: all 0.3s ease;
+}
+
 header li {
   display: inline-block;
   list-style-type: none;
-  margin: 10px;
+  margin: 0.5rem;
 }
 
 header li a {
   color: #33eeff;
   text-decoration: none;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1rem;
   text-transform: uppercase;
 }
 
@@ -67,9 +61,27 @@ header li a:hover {
   transition: all 0.25s ease;
 }
 
-.hero-banner {
-  padding: 400px 0px 300px 0px;
+main h2 {
+  padding-bottom: 1rem;
+  letter-spacing: 0.25ch;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: #abc7d9;
 }
+
+section {
+  clear: both;
+  padding: 6rem 0;
+  width: 100%;
+}
+
+footer {
+  clear: both;
+  background-color: #14213d;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
 footer h2,
 .hero-banner h2 {
   font-size: 3rem;
@@ -79,80 +91,41 @@ footer h2,
   text-transform: capitalize;
 }
 
-main h2 {
-  padding-bottom: 20px;
-  letter-spacing: 0.25ch;
-  text-transform: uppercase;
-  font-size: 2em;
-  color: #abc7d9;
-}
-
-p {
-  line-height: 150%;
-  font-size: 1.2rem;
-}
-
-img {
-  width: 300px;
-  height: 200px;
-  margin-bottom: 20px;
-}
-
-.float-left {
-  float: left;
-  margin-right: 30px;
-}
-
-.float-right {
-  float: right;
-  margin-left: 30px;
-}
-
-footer {
-  clear: both;
-  background-color: #14213d;
-  text-align: center;
-  padding-bottom: 10px;
-}
-
 form {
+  margin-top: 2rem;
   background-color: #abc7d9;
-  width: 350px;
+  width: 400px;
   border-radius: 5px;
-  padding: 20px;
-  margin: 20px auto 0px auto;
-}
-
-.form-input {
-  display: flex;
-  flex-direction: column;
+  padding: 1.5rem;
 }
 
 label {
   color: #05080f;
   font-weight: 300;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: left;
 }
 
 input {
-  height: 30px;
+  height: 2rem;
   border-radius: 5px;
-  padding: 20px 10px;
+  padding: 1.2rem 0.5rem;
 }
 
 textarea {
   max-width: 100%;
   min-height: 200px;
   border-radius: 5px;
-  padding: 10px;
+  padding: 0.5rem;
 }
 
 button {
   background-color: #33eeff;
   color: #14213d;
-  padding: 20px;
+  padding: 1.2rem;
   text-transform: uppercase;
+  box-shadow: 0 0 5px #aaa;
+  cursor: pointer;
 }
 
 button:focus {
@@ -164,8 +137,43 @@ button:hover {
   transition: all 0.25s ease;
 }
 
+.alt-background {
+  background-color: #05080f;
+}
+
+.container {
+  width: 88vw;
+  max-width: 992px;
+  margin: 0 auto;
+}
+
+.hero-banner {
+  padding-top: 200px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.float-left {
+  float: left;
+  margin-right: 1.8rem;
+  width: 50%;
+}
+
+.float-right {
+  float: right;
+  margin-left: 1.8rem;
+  width: 50%;
+}
+
 .form-input {
-  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input {
+  margin-bottom: 1rem;
 }
 
 .chakra-font {
@@ -177,7 +185,6 @@ button:hover {
 .back-to-top {
   position: fixed;
   right: 10px;
-  /* bottom: 20px; */
   width: 0;
   height: 0;
   border-bottom: 35px solid #33eeffa8;
@@ -195,5 +202,58 @@ button:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-top: 20px;
+  align-content: space-around;
+}
+
+.card {
+  width: 32%;
+  background-color: #14213d;
+  text-align: center;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .back-to-top {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  footer h2 {
+    font-size: 2rem;
+  }
+
+  form {
+    width: 90vw;
+  }
+
+  .float-left {
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .float-right {
+    margin: 1rem 0;
+    width: 100%;
+  }
 }
