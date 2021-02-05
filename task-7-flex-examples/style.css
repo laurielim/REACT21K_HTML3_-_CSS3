@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+}
+
+body {
+  background-color: gainsboro;
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+li {
+  display: inline-block;
+  padding: 1rem;
+}
+
+header {
+  background-color: #333;
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+}
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.box {
+  background-color: teal;
+  width: 28%;
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 0 0 5px #333;
+}
+
+#hero-banner {
+  background: url("https://source.unsplash.com/cRPQyuYosdY/1600x900") no-repeat
+    center center/ cover;
+  height: 75vh;
+  justify-content: center;
+  align-items: center;
+}
