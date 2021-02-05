@@ -17,33 +17,33 @@ body {
 
 .container {
   width: 80%;
-  max-width: 850px;
+  max-width: 900px;
   margin: 50px auto;
 }
 
 section {
   clear: both;
-  padding: 100px 0;
+  padding: 10vh 0;
+  width: 100%;
 }
 
 .alt-background {
   background-color: #05080f;
-  width: 100%;
 }
 header {
   text-align: center;
   background-color: #05080f00;
   width: 100%;
   position: fixed;
-  padding: 25px;
-  transition: all 0.3s;
+  padding: 3vh;
+  transition: all 0.3s ease;
 }
 
 h1 {
   color: #fffafb;
   text-transform: lowercase;
   letter-spacing: 0.5ch;
-  font-size: 60px;
+  font-size: 4rem;
   font-weight: 300;
   transition: all 0.3s ease;
 }
@@ -72,7 +72,7 @@ header li a:hover {
 }
 footer h2,
 .hero-banner h2 {
-  font-size: 60px;
+  font-size: 3rem;
   text-align: center;
   color: #fffafb;
   font-weight: 400;
@@ -83,13 +83,13 @@ main h2 {
   padding-bottom: 20px;
   letter-spacing: 0.25ch;
   text-transform: uppercase;
-  font-size: 32px;
+  font-size: 2em;
   color: #abc7d9;
 }
 
 p {
   line-height: 150%;
-  font-size: 20px;
+  font-size: 1.2rem;
 }
 
 img {
@@ -131,7 +131,7 @@ form {
 label {
   color: #05080f;
   font-weight: 300;
-  font-size: 32px;
+  font-size: 2rem;
   text-align: left;
 }
 
@@ -170,7 +170,7 @@ button:hover {
 
 .chakra-font {
   font-family: "Chakra Petch", sans-serif;
-  font-size: 20px;
+  font-size: 1rem;
   font-weight: 700;
 }
 
@@ -180,7 +180,7 @@ button:hover {
   /* bottom: 20px; */
   width: 0;
   height: 0;
-  border-bottom: 35px solid #33eeffcc;
+  border-bottom: 35px solid #33eeffa8;
   border-right: 25px solid transparent;
   border-left: 25px solid transparent;
   cursor: pointer;
@@ -189,4 +189,11 @@ button:hover {
 
 .back-to-top:hover {
   border-bottom: 35px solid #33eeff;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
 }

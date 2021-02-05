@@ -6,10 +6,10 @@ const minHeader = () => {
     document.body.scrollTop > 200 ||
     document.documentElement.scrollTop > 200
   ) {
-    logo.style.fontSize = "32px";
+    logo.style.fontSize = "2rem";
     header.style.backgroundColor = "#05080fee";
   } else {
-    logo.style.fontSize = "60px";
+    logo.style.fontSize = "4rem";
     header.style.backgroundColor = "#05080f00";
   }
 };
