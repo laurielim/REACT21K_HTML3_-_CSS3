@@ -1,0 +1,97 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.2rem;
+}
+
+header {
+  background-color: rgb(66, 65, 65);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+}
+
+.logo {
+  color: white;
+}
+
+li {
+  display: inline-block;
+  padding: 0 1rem;
+  list-style-type: none;
+}
+
+li a {
+  text-decoration: none;
+  color: lightgray;
+}
+
+.hero-banner {
+  height: 60vh;
+  background: url(https://source.unsplash.com/1600x900/?mauritius) no-repeat
+    center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero-banner:hover::before {
+  content: "";
+  background-color: rgba(80, 52, 0, 0.2);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.hero-banner h1 {
+  color: white;
+  z-index: 1;
+  letter-spacing: 0.5rem;
+}
+
+.hero-banner h1::after {
+  content: "Welcome to Mauritius";
+}
+
+.hero-banner h1::first-letter {
+  font-size: 3rem;
+  letter-spacing: 0rem;
+}
+
+#boxes {
+  background-color: burlywood;
+  position: relative;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  background-color: blueviolet;
+  /* position: relative; */
+  margin-top: 1rem;
+}
+
+#boxes:first-child {
+  margin-top: 50px;
+}
+
+.box:nth-child(3) {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.box:nth-child(6) {
+  position: sticky;
+  left: 10rem;
+  top: 10rem;
+}

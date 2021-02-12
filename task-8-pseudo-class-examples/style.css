@@ -1,0 +1,59 @@
+/* Examples of pseudo class */
+a:link {
+  color: black;
+  text-decoration: none;
+}
+
+a:visited {
+  color: blue;
+  text-decoration: none;
+}
+
+/* Highlight link when you are on the link */
+a:active {
+  color: red;
+  text-decoration: underline;
+}
+
+/* Highlight link when using keyboard and using the tab key */
+a:focus {
+  color: green;
+}
+
+a:hover {
+  color: orange;
+  text-decoration: underline;
+}
+
+li {
+  background: green;
+}
+
+li:first-child a {
+  background: blue;
+  color: pink;
+}
+
+li:last-child {
+  background: aqua;
+}
+
+/* Targets 2nd element */
+li:nth-child(2) {
+  background: blanchedalmond;
+}
+
+/* Every odd element - can also be even */
+li:nth-child(odd) {
+  background: yellow;
+}
+
+/* Every 4 elements */
+li:nth-child(4n) {
+  background: violet;
+}
+
+/* Every 4 elements. starting with the 10th */
+li:nth-child(4n + 10) {
+  background: silver;
+}

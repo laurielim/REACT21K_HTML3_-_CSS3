@@ -24,6 +24,23 @@ h1 {
   transition: all 0.3s ease;
 }
 
+footer h2,
+.hero-banner h2 {
+  font-size: 3rem;
+  text-align: center;
+  color: #fffafb;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+main h2 {
+  padding-bottom: 1rem;
+  letter-spacing: 0.25ch;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: #abc7d9;
+}
+
 p {
   line-height: 150%;
   font-size: 1.2rem;
@@ -32,6 +49,8 @@ p {
 img {
   width: 100%;
 }
+
+/**************** Header area ****************/
 
 header {
   text-align: center;
@@ -61,12 +80,12 @@ header li a:hover {
   transition: all 0.25s ease;
 }
 
-main h2 {
-  padding-bottom: 1rem;
-  letter-spacing: 0.25ch;
-  text-transform: uppercase;
-  font-size: 2rem;
-  color: #abc7d9;
+/**************** Main area ****************/
+
+.container {
+  width: 88vw;
+  max-width: 992px;
+  margin: 0 auto;
 }
 
 section {
@@ -75,6 +94,32 @@ section {
   width: 100%;
 }
 
+section:nth-child(even) {
+  background-color: #05080f;
+}
+
+.hero-banner {
+  padding-top: 200px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.float-left {
+  float: left;
+  margin-right: 1.8rem;
+  width: 50%;
+}
+
+.float-right {
+  float: right;
+  margin-left: 1.8rem;
+  width: 50%;
+}
+
+/**************** Footer area ****************/
+
 footer {
   clear: both;
   background-color: #14213d;
@@ -82,13 +127,14 @@ footer {
   padding-bottom: 1rem;
 }
 
-footer h2,
-.hero-banner h2 {
-  font-size: 3rem;
-  text-align: center;
-  color: #fffafb;
-  font-weight: 400;
-  text-transform: capitalize;
+/**************** Form ****************/
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
 }
 
 form {
@@ -137,36 +183,6 @@ button:hover {
   transition: all 0.25s ease;
 }
 
-.alt-background {
-  background-color: #05080f;
-}
-
-.container {
-  width: 88vw;
-  max-width: 992px;
-  margin: 0 auto;
-}
-
-.hero-banner {
-  padding-top: 200px;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.float-left {
-  float: left;
-  margin-right: 1.8rem;
-  width: 50%;
-}
-
-.float-right {
-  float: right;
-  margin-left: 1.8rem;
-  width: 50%;
-}
-
 .form-input {
   display: flex;
   flex-direction: column;
@@ -209,14 +225,6 @@ button:hover {
   width: 32%;
   background-color: #14213d;
   text-align: center;
-}
-
-#contact {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 3rem;
 }
 
 @media (max-width: 768px) {
