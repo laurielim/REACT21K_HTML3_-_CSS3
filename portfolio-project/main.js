@@ -6,25 +6,23 @@ const minHeader = () => {
     document.body.scrollTop > 200 ||
     document.documentElement.scrollTop > 200
   ) {
-    if (window.matchMedia("(max-width: 600px)").matches) {
+    if (window.matchMedia("(max-width: 576px)").matches) {
       logo.style.fontSize = "1rem";
       header.style.backgroundColor = "#05080fee";
     } else if (window.matchMedia("(max-width: 768px)").matches) {
       logo.style.fontSize = "1.5rem";
       header.style.backgroundColor = "#05080fee";
     } else {
-      logo.style.fontSize = "2rem";
       header.style.backgroundColor = "#05080fee";
     }
   } else {
-    if (window.matchMedia("(max-width: 600px)").matches) {
+    if (window.matchMedia("(max-width: 576px)").matches) {
       logo.style.fontSize = "2rem";
       header.style.backgroundColor = "#05080f00";
     } else if (window.matchMedia("(max-width: 768px)").matches) {
       logo.style.fontSize = "3rem";
       header.style.backgroundColor = "#05080f00";
     } else {
-      logo.style.fontSize = "4rem";
       header.style.backgroundColor = "#05080f00";
     }
   }

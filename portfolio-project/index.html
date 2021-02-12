@@ -7,24 +7,29 @@
       name="description"
       content="Project showcasing learnings from REACT21K"
     />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/a2c0f4df91.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Portfolo Project</title>
   </head>
   <body>
     <header id="header">
       <div class="logo">
-        <h1 id="logo">#laurie-lim</h1>
+        <a class="logo-link" href="#top"><h1 id="logo">#laurie-lim</h1></a>
       </div>
       <nav>
         <ul>
-          <li><a href="#past">Past</a></li>
-          <li><a href="#present">Present</a></li>
-          <li><a href="#future">Future</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -33,40 +38,46 @@
       <section id="top" class="hero-banner">
         <h2>Welcome to my portfolio</h2>
       </section>
-      <section id="past">
+      <section id="work">
         <div class="container">
-          <h2>Past</h2>
+          <h2>Work</h2>
           <div class="cards-container">
-            <div class="card">
+            <div class="card"><a href="#">
               <img
                 src="https://source.unsplash.com/aFVpxSxOCPY/1600x900"
                 alt="random photo from unsplash"
               />
-              <h3>Card Title</h3>
-              <a href="#">Read More</a>
+              <div class="card-content">
+                <h3>Card Title</h3>
+                <p> Read More</p></a>
+              </div>
             </div>
-            <div class="card">
+            <div class="card"><a href="#">
               <img
                 src="https://source.unsplash.com/5WZbaV96IjA/1600x900"
                 alt="random photo from unsplash"
               />
-              <h3>Card Title</h3>
-              <a href="#">Read More</a>
+              <div class="card-content">
+                <h3>Card Title</h3>
+                <p> Read More</p></a>
+              </div>
             </div>
-            <div class="card">
+            <div class="card"><a href="#">
               <img
                 src="https://source.unsplash.com/UeLH2Brpzi8/1600x900"
                 alt="random photo from unsplash"
               />
-              <h3>Card Title</h3>
-              <a href="#">Read More</a>
+              <div class="card-content">
+                <h3>Card Title</h3>
+                <p> Read More</p></a>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <section id="present">
+      <section id="experience">
         <div class="container">
-          <h2>Present</h2>
+          <h2>Experience</h2>
           <img
             class="float-left"
             src="https://source.unsplash.com/w6KSwwnQyaE/1600x900"
@@ -84,19 +95,33 @@
           </p>
         </div>
       </section>
-      <section id="future">
+      <section id="skills">
         <div class="container">
-          <h2>Future</h2>
-          <img class="float-right" src="/images/future.png" alt="Hackerman" />
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius,
-            ullam? Delectus, mollitia odio et in inventore consequatur facere
-            suscipit laborum quisquam rem necessitatibus perspiciatis tempore,
-            sint voluptates! Quisquam voluptate illo est reiciendis consequuntur
-            eligendi at deleniti rem perferendis sit molestias tenetur
-            accusantium itaque nisi, expedita, repellendus excepturi, ipsum
-            neque esse voluptatibus. Totam, debitis eos!
-          </p>
+          <h2>Skills</h2>
+          <div class="skills-container">
+            <div class="skill">
+              <label for="html5"><i class="fab fa-html5"></i> HTML</label>
+              <progress id="html5" value="70" max="100"></progress>
+              <p>70%</p>
+            </div>
+            <div class="skill">
+              <label for="css3"><i class="fab fa-css3"></i> CSS</label>
+              <progress id="css3" value="50" max="100"></progress>
+              <p>50%</p>
+            </div>
+            <div class="skill">
+              <label for="javascript"
+                ><i class="fab fa-js-square"></i> JavaScript</label
+              >
+              <progress id="javascript" value="30" max="100"></progress>
+              <p>30%</p>
+            </div>
+            <div class="skill">
+              <label for="react"><i class="fab fa-react"></i> React</label>
+              <progress id="react" value="0" max="100"></progress>
+              <p>0%</p>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -105,13 +130,15 @@
         <div class="container"></div>
         <h2>Contact Me</h2>
         <form action="#">
-          <div class="form-input">
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" class="chakra-font" />
-          </div>
-          <div class="form-input">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" class="chakra-font" />
+          <div class="contact-details">
+            <div class="contact-info form-input">
+              <label for="name">Name</label>
+              <input type="text" name="name" id="name" class="chakra-font" />
+            </div>
+            <div class="contact-info form-input">
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" class="chakra-font" />
+            </div>
           </div>
           <div class="form-input">
             <label for="message">Message</label>
