@@ -1,3 +1,7 @@
+:root {
+  --font: "Chakra Petch", sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +12,7 @@ html {
 }
 
 body {
-  font-family: "Chakra Petch", sans-serif;
+  font-family: var(--font);
   background-color: #14213d;
   background: #05080f url("https://source.unsplash.com/PzO_CitnJdI/") no-repeat
     fixed center center/ cover;
@@ -35,6 +39,11 @@ footer h2,
   font-weight: 400;
   text-transform: capitalize;
   z-index: 1;
+}
+
+.glow {
+  text-shadow: 0 0 10px rgba(51, 238, 255, 1), 0 0 20px rgba(51, 238, 255, 1),
+    0 0 40px white;
 }
 
 main h2 {
@@ -88,11 +97,11 @@ header li {
   display: inline-block;
   list-style-type: none;
   margin: 1rem;
+  transition: border 0.1s ease-in;
 }
 
 header li:hover {
   border-bottom: 0.3rem solid #ff5a1f;
-  transition: all 0.1s ease;
   margin-bottom: 0;
 }
 
@@ -102,6 +111,10 @@ header li a {
   font-weight: 700;
   font-size: 1rem;
   text-transform: uppercase;
+}
+
+.btn-menu {
+  display: none;
 }
 
 /**************** Main area ****************/
@@ -151,10 +164,12 @@ section:nth-child(even) {
   width: 32%;
   background-color: #14213d;
   position: relative;
+  bottom: 0;
+  transition: all 0.2s ease-out;
 }
 
 .card:hover {
-  top: -10px;
+  bottom: 10px;
 }
 
 .card-content {
@@ -219,6 +234,7 @@ h3 {
 progress[value] {
   /* Reset the default appearance */
   -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 
   /* Get rid of default border in Firefox. */
@@ -269,7 +285,19 @@ progress[value]::-webkit-progress-value {
 }
 
 .grid-div > img {
+  width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  transition: all 0.1s ease-out;
+}
+
+.grid-div > img:hover {
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
+  border: 0.2rem solid black;
+  border-radius: 2px;
+  transform: scale(1.2);
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -365,7 +393,7 @@ textarea {
   padding: 0.5rem;
 }
 
-button {
+form button {
   background-color: #33eeff;
   color: #14213d;
   padding: 1.2rem;
@@ -374,17 +402,17 @@ button {
   cursor: pointer;
 }
 
-button:focus {
-  outline: none;
-}
-
-button:hover {
+form button:hover {
   background-color: #ff5a1f;
   transition: all 0.25s ease;
 }
 
+form button:focus {
+  outline: none;
+}
+
 .chakra-font {
-  font-family: "Chakra Petch", sans-serif;
+  font-family: var(--font);
   font-size: 1.2rem;
   font-weight: 700;
 }
@@ -412,6 +440,7 @@ button:hover {
   .card {
     width: 100%;
     margin-bottom: 1rem;
+    transition: none;
   }
 
   .card:hover {
@@ -429,12 +458,61 @@ button:hover {
     display: none;
   }
 
-  h1 {
-    font-size: 2rem;
+  header {
+    display: flex;
   }
 
-  header li {
-    margin: 0 0.5rem;
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .btn-menu {
+    display: block;
+    font-size: 1.2rem;
+    width: 2rem;
+    background-color: rgba(0, 217, 255, 1);
+  }
+
+  .btn-menu:focus {
+    outline: none;
+  }
+  .btn-glow {
+    box-shadow: 0 0 8px 2px rgba(0, 217, 255, 1);
+    background-color: white;
+  }
+  nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: #05080fee;
+    z-index: -1;
+    padding-top: 10vh;
+  }
+
+  .responsive {
+    display: block;
+  }
+
+  header ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 90%;
+  }
+
+  header li a {
+    font-size: 2rem;
+  }
+  header li a:hover {
+    color: rgb(255, 90, 31);
+  }
+
+  header li:hover {
+    border-bottom: none;
+    margin-bottom: 1rem;
   }
 
   footer h2 {
@@ -481,5 +559,11 @@ button:hover {
   .gallery-grid {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .grid-div > img:hover {
+    border: none;
+    border-radius: 2px;
+    transform: none;
   }
 }

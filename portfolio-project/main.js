@@ -1,5 +1,9 @@
-let header = document.querySelector("#header");
-let logo = document.querySelector("#logo");
+let header = document.getElementById("header");
+let logo = document.getElementById("logo");
+let btnMenu = document.getElementById("btnMenu");
+let nav = document.querySelector("nav");
+let navItems = document.querySelectorAll("nav li");
+let openNav = false;
 
 const minHeader = () => {
   if (
@@ -7,7 +11,6 @@ const minHeader = () => {
     document.documentElement.scrollTop > 200
   ) {
     if (window.matchMedia("(max-width: 576px)").matches) {
-      logo.style.fontSize = "1rem";
       header.style.backgroundColor = "#05080fee";
     } else if (window.matchMedia("(max-width: 768px)").matches) {
       logo.style.fontSize = "1.5rem";
@@ -17,7 +20,6 @@ const minHeader = () => {
     }
   } else {
     if (window.matchMedia("(max-width: 576px)").matches) {
-      logo.style.fontSize = "2rem";
       header.style.backgroundColor = "#05080f00";
     } else if (window.matchMedia("(max-width: 768px)").matches) {
       logo.style.fontSize = "3rem";
@@ -42,3 +44,22 @@ const toTop = () => {
   }
 };
 document.addEventListener("scroll", toTop);
+
+const moMenu = () => {
+  nav.classList.toggle("responsive");
+  btnMenu.classList.toggle("btn-glow");
+  if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
+  ) {
+    header.classList.toggle("bg");
+  }
+  for (let i = 0; i < navItems.length; i++) {
+    navItems[i].addEventListener("click", moMenu);
+  }
+};
+
+btnMenu.addEventListener("click", moMenu);
+
+btnMenu.addEventListener("click", toggleMenu);
+navItems.forEach((item) => item.addEventListener("click", toggleMenu));
