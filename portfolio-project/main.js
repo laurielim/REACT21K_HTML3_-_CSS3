@@ -60,6 +60,3 @@ const moMenu = () => {
 };
 
 btnMenu.addEventListener("click", moMenu);
-
-btnMenu.addEventListener("click", toggleMenu);
-navItems.forEach((item) => item.addEventListener("click", toggleMenu));

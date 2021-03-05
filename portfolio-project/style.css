@@ -1,5 +1,11 @@
 :root {
   --font: "Chakra Petch", sans-serif;
+  --primary-color: #14213d;
+  --secondary-color: #abc7d9;
+  --dark-color: #05080f;
+  --light-color: #fffafb;
+  --accent-color-1: #ff5a1f;
+  --accent-color-2: #33eeff;
 }
 
 * {
@@ -13,14 +19,14 @@ html {
 
 body {
   font-family: var(--font);
-  background-color: #14213d;
-  background: #05080f url("https://source.unsplash.com/PzO_CitnJdI/") no-repeat
-    fixed center center/ cover;
-  color: #fffafb;
+  background-color: var(--primary-color);
+  background: var(--dark-color) url("https://source.unsplash.com/PzO_CitnJdI/")
+    no-repeat fixed center center/ cover;
+  color: var(--light-color);
 }
 
 h1 {
-  color: #fffafb;
+  color: var(--light-color);
   text-transform: lowercase;
   letter-spacing: 0.5ch;
   font-size: 2rem;
@@ -35,15 +41,15 @@ footer h2,
 .hero-banner h2 {
   font-size: 3rem;
   text-align: center;
-  color: #fffafb;
+  color: var(--light-color);
   font-weight: 400;
   text-transform: capitalize;
   z-index: 1;
 }
 
 .glow {
-  text-shadow: 0 0 10px rgba(51, 238, 255, 1), 0 0 20px rgba(51, 238, 255, 1),
-    0 0 40px white;
+  text-shadow: 0 0 10px var(--accent-color-2), 0 0 20px var(--accent-color-2),
+    0 0 40px var(--light-color);
 }
 
 main h2 {
@@ -51,7 +57,7 @@ main h2 {
   letter-spacing: 0.25ch;
   text-transform: uppercase;
   font-size: 2rem;
-  color: #abc7d9;
+  color: var(--secondary-color);
 }
 
 p {
@@ -76,7 +82,7 @@ img {
 }
 
 .back-to-top:hover {
-  border-bottom: 35px solid #33eeff;
+  border-bottom: 35px solid var(--accent-color-2);
 }
 
 /**************** Header area ****************/
@@ -101,12 +107,12 @@ header li {
 }
 
 header li:hover {
-  border-bottom: 0.3rem solid #ff5a1f;
+  border-bottom: 0.3rem solid var(--accent-color-1);
   margin-bottom: 0;
 }
 
 header li a {
-  color: #33eeff;
+  color: var(--accent-color-2);
   text-decoration: none;
   font-weight: 700;
   font-size: 1rem;
@@ -132,7 +138,7 @@ section {
 }
 
 section:nth-child(even) {
-  background-color: #05080f;
+  background-color: var(--dark-color);
 }
 
 .hero-banner {
@@ -162,7 +168,7 @@ section:nth-child(even) {
 
 .card {
   width: 32%;
-  background-color: #14213d;
+  background-color: var(--primary-color);
   position: relative;
   bottom: 0;
   transition: all 0.2s ease-out;
@@ -182,12 +188,12 @@ h3 {
 }
 
 .card a {
-  color: white;
+  color: var(--light-color);
   text-decoration: none;
 }
 
 .card p {
-  color: #ff5a1f;
+  color: var(--accent-color-1);
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -253,14 +259,14 @@ progress[value] {
 progress[value]::-webkit-progress-bar {
   background-color: #eee;
   border-radius: 2px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5) inset;
+  box-shadow: 0 2px 5px #00000080 inset;
 }
 progress[value]::-webkit-progress-value {
-  background: rgb(255, 90, 31);
+  background: var(--accent-color-1);
   background-image: -webkit-linear-gradient(
     150deg,
-    rgba(255, 90, 31, 1) 50%,
-    rgba(51, 238, 255, 1) 100%
+    var(--accent-color-1) 50%,
+    var(--accent-color-2) 100%
   );
   border-radius: 2px;
 }
@@ -294,7 +300,7 @@ progress[value]::-webkit-progress-value {
 
 .grid-div > img:hover {
   box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
-  border: 0.2rem solid black;
+  border: 0.2rem solid var(--dark-color);
   border-radius: 2px;
   transform: scale(1.2);
   -o-object-fit: cover;
@@ -341,7 +347,7 @@ progress[value]::-webkit-progress-value {
 
 footer {
   clear: both;
-  background-color: #14213d;
+  background-color: var(--primary-color);
   text-align: center;
   padding-bottom: 1rem;
 }
@@ -358,7 +364,7 @@ footer {
 
 form {
   margin-top: 2rem;
-  background-color: #abc7d9;
+  background-color: var(--secondary-color);
   width: 100%;
   max-width: 800px;
   border-radius: 5px;
@@ -372,7 +378,7 @@ form {
 }
 
 form label {
-  color: #05080f;
+  color: var(--dark-color);
   font-weight: 300;
   font-size: 1.5rem;
   text-align: left;
@@ -394,8 +400,8 @@ textarea {
 }
 
 form button {
-  background-color: #33eeff;
-  color: #14213d;
+  background-color: var(--accent-color-2);
+  color: var(--primary-color);
   padding: 1.2rem;
   text-transform: uppercase;
   box-shadow: 0 0 5px #aaa;
@@ -403,7 +409,7 @@ form button {
 }
 
 form button:hover {
-  background-color: #ff5a1f;
+  background-color: var(--accent-color-1);
   transition: all 0.25s ease;
 }
 
@@ -470,15 +476,20 @@ form button:focus {
     display: block;
     font-size: 1.2rem;
     width: 2rem;
-    background-color: rgba(0, 217, 255, 1);
+    background-color: var(--accent-color-2);
+  }
+
+  .btn-menu:hover {
+    background-color: #00d9ffe6;
+    /* color: var(--dark-color); */
   }
 
   .btn-menu:focus {
     outline: none;
   }
   .btn-glow {
-    box-shadow: 0 0 8px 2px rgba(0, 217, 255, 1);
-    background-color: white;
+    box-shadow: 0 0 8px 2px var(--accent-color-2);
+    background-color: var(--light-color);
   }
   nav {
     display: none;
@@ -507,7 +518,7 @@ form button:focus {
     font-size: 2rem;
   }
   header li a:hover {
-    color: rgb(255, 90, 31);
+    color: var(--accent-color-1);
   }
 
   header li:hover {
