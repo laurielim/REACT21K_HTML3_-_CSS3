@@ -254,6 +254,12 @@ progress[value]::-webkit-progress-value {
   text-align: right;
 }
 
+/**************** Gallery area ****************/
+
+.grid {
+  display: grid;
+}
+
 /**************** Footer area ****************/
 
 footer {
