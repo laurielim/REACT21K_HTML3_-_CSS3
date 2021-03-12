@@ -82,7 +82,7 @@ img {
 }
 
 .back-to-top:hover {
-  border-bottom: 35px solid var(--accent-color-2);
+  border-bottom: 35px solid var(--secondary-color);
 }
 
 /**************** Header area ****************/
@@ -481,7 +481,6 @@ form button:focus {
 
   .btn-menu:hover {
     background-color: #00d9ffe6;
-    /* color: var(--dark-color); */
   }
 
   .btn-menu:focus {
