@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* background-image: linear-gradient(
+    to top,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    purple
+  ); */
+  background-image: radial-gradient(
+    ellipse at bottom,
+    red 0%,
+    red 10%,
+    orange 10%,
+    orange 20%,
+    yellow 20%,
+    yellow 30%,
+    green 30%,
+    green 40%,
+    blue 40%,
+    blue 50%,
+    indigo 50%,
+    indigo 60%,
+    purple 60%,
+    purple 70%,
+    lightskyblue 70%
+  );
+  background-repeat: no-repeat;
+  height: 100vh;
+}
