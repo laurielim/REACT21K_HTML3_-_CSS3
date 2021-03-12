@@ -1,6 +1,7 @@
 body {
   background-image: linear-gradient(30deg, purple, pink);
   background-position: left;
+  background-repeat: no-repeat;
   background-size: 300%;
   animation-name: moving-bg;
   animation-iteration-count: infinite;
@@ -130,4 +131,52 @@ body {
 }
 
 .animated-circle {
+  height: 120px;
+  width: 120px;
+  position: relative;
+  border-radius: 50%;
+  background-color: tomato;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: shapeshift 5s infinite, box-step 10s infinite;
+}
+
+@keyframes shapeshift {
+  50% {
+    width: 180px;
+    border-radius: 5px;
+    background-color: yellow;
+  }
+}
+
+@keyframes box-step {
+  0% {
+    bottom: 0;
+    left: 0;
+  }
+
+  25% {
+    bottom: 0;
+    left: 50vw;
+  }
+
+  50% {
+    bottom: 100px;
+    left: 50vw;
+  }
+  75% {
+    bottom: 100px;
+    left: 0;
+  }
+  100% {
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.animated-circle:hover {
+  animation-play-state: paused;
+  background-color: red;
 }
