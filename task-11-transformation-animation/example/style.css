@@ -1,0 +1,118 @@
+body {
+  background-image: linear-gradient(red, orange);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: cover;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.card {
+  margin: 0 auto;
+  height: 300px;
+  width: 200px;
+  background-image: radial-gradient(gainsboro, lightsteelblue);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 1s;
+}
+
+.card:hover {
+  box-shadow: 0 0 50px #00000055, inset 0 0 100px 50px #0ff;
+  /* transform: rotate(1000deg); */
+  /* transform: skew(10deg, 20deg); */
+  /* transform: scale(2); */
+  /* transform: translate(50%); */
+  /* transform: translate(20px); */
+  /* transform: translate(20px, 10px); */
+  transform: perspective(2000px) rotateX(45deg);
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: purple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 200px auto;
+  animation-name: example;
+  animation-duration: 3s;
+  animation-iteration-count: 5;
+  position: relative;
+}
+
+/* @keyframes example {
+  from {
+    background-color: blue;
+  }
+  to {
+    background-color: green;
+  }
+} */
+
+@keyframes example {
+  20% {
+    background-color: red;
+    top: 0;
+    left: 0;
+  }
+  40% {
+    background-color: blue;
+    top: 0;
+    left: 200px;
+  }
+  60% {
+    background-color: yellow;
+    top: 200px;
+    left: 200px;
+  }
+  80% {
+    background-color: green;
+    top: 200px;
+    left: 0px;
+  }
+  100% {
+    background-color: red;
+    top: 0;
+    left: 0;
+  }
+}
+
+h2 {
+  display: inline-block;
+  position: relative;
+  padding: 10px;
+  text-align: left;
+  background-color: red;
+}
+
+.underline h2::after {
+  content: "";
+  height: 4px;
+  width: 0%;
+  display: block;
+  background-color: green;
+  transition: 1s ease-in all;
+}
+
+.underline:hover h2::after {
+  width: 100%;
+}
+
+.sideline h2::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 200px;
+  left: 0;
+  bottom: 0;
+  border-right: 5px solid green;
+  transition: all 1s;
+}
+.sideline:hover h2::before {
+  top: 0;
+}
