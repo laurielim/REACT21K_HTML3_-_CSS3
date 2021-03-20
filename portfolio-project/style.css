@@ -170,12 +170,11 @@ section:nth-child(even) {
   width: 32%;
   background-color: var(--primary-color);
   position: relative;
-  bottom: 0;
   transition: all 0.2s ease-out;
 }
 
 .card:hover {
-  bottom: 10px;
+  transform: translateY(-10px);
 }
 
 .card-content {
@@ -460,10 +459,6 @@ form button:focus {
 
 /**************** Mobile support ****************/
 @media (max-width: 576px) {
-  .back-to-top {
-    display: none;
-  }
-
   header {
     display: flex;
   }
