@@ -21,25 +21,31 @@
     <title>Portfolo Project</title>
   </head>
   <body>
-    <header id="header">
-      <div class="logo">
-        <a class="logo-link" href="./"
-          ><h1 class="glow" id="logo">#laurie-lim</h1></a
-        >
+    <header>
+      <div id="header" class="header-container">
+        <div class="logo">
+          <a class="logo-link" href="./"
+            ><h1 class="glow" id="logo">#laurie-lim</h1></a
+          >
+        </div>
+        <button type="button" class="btn-menu" id="btnMenu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+          <ul>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="./gallery.html#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
       </div>
-      <button type="button" class="btn-menu" id="btnMenu">
-        <i class="fas fa-bars"></i>
-      </button>
-      <nav>
-        <ul>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="./gallery.html#gallery">Gallery</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scrollBar"></div>
+      </div>
     </header>
+
     <main>
       <section id="top" class="hero-banner">
         <h2 class="glow">Welcome to my portfolio</h2>
@@ -50,37 +56,37 @@
           <div class="cards-container">
             <div class="card">
               <img
-                src="https://source.unsplash.com/aFVpxSxOCPY/1600x900"
-                alt="random photo from unsplash"
+                src="./images/arcade-center.png"
+                alt="screenshot of arcade center website"
               />
               <div class="card-content">
-                <a href="#">
-                  <h3>Card Title</h3>
-                  <p>Read More</p></a
+                <a href="https://bch-group-project-arcade-center.github.io/">
+                  <h3>What's your score?</h3>
+                  <p>Arcade Center</p></a
                 >
               </div>
             </div>
             <div class="card">
               <img
-                src="https://source.unsplash.com/5WZbaV96IjA/1600x900"
-                alt="random photo from unsplash"
+                src="./images/days-counter.png"
+                alt="screenshot of days counter app"
               />
               <div class="card-content">
                 <a href="#">
-                  <h3>Card Title</h3>
-                  <p>Read More</p></a
+                  <h3>How many days until?</h3>
+                  <p>Days Counter</p></a
                 >
               </div>
             </div>
             <div class="card">
               <img
-                src="https://source.unsplash.com/UeLH2Brpzi8/1600x900"
-                alt="random photo from unsplash"
+                src="./images/speed-game.png"
+                alt="screenshot of speed game"
               />
               <div class="card-content">
-                <a href="#">
-                  <h3>Card Title</h3>
-                  <p>Read More</p></a
+                <a href="https://laurielim.github.io/speed-game/">
+                  <h3>How fast are you?</h3>
+                  <p>Speed Game</p></a
                 >
               </div>
             </div>
@@ -96,14 +102,13 @@
             alt="Finland"
           />
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius,
-            ullam? Non delectus, nisi beatae minima consequatur ibus
-            perspiciatis tempore, sint voluptates! Quisquam eum laudantium sit
-            molestias expedita, repellendus excepturi, ipsum neque esse
-            voluptatibus. Lorem ipsum, dolor sit amet consectetur adipisicing
-            elit. Sed beatae rem, dolorum perferendis saepe assumenda odit
-            officiis odio temporibus iste error optio quisquam ex autem. Non
-            delectus!
+            Hi! I've been learning programming for 1.5 year now. I first did
+            some online courses, notably MIT 6.00.1x: Introduction to Computer
+            Science and Programming Using Python & Harvard CS50x: Introduction
+            to Computer Science. I am now enrolled in a full stack web developer
+            where I am learning HTML, CSS, JavaScript, React and PHP at Business
+            College Helsinki. Also, I have a Bachelor Degree in Business
+            Administration from ESADE.
           </p>
         </div>
       </section>
@@ -118,15 +123,15 @@
             </div>
             <div class="skill">
               <label for="css3"><i class="fab fa-css3"></i> CSS</label>
-              <progress id="css3" value="50" max="100"></progress>
-              <p>50%</p>
+              <progress id="css3" value="60" max="100"></progress>
+              <p>60%</p>
             </div>
             <div class="skill">
               <label for="javascript"
                 ><i class="fab fa-js-square"></i> JavaScript</label
               >
-              <progress id="javascript" value="30" max="100"></progress>
-              <p>30%</p>
+              <progress id="javascript" value="50" max="100"></progress>
+              <p>50%</p>
             </div>
             <div class="skill">
               <label for="react"><i class="fab fa-react"></i> React</label>
@@ -166,7 +171,7 @@
       </section>
       <p class="copyright">Copyright</p>
       <a href="#top">
-        <div class="back-to-top"></div>
+        <button class="back-to-top"></button>
       </a>
     </footer>
     <script src="main.js"></script>

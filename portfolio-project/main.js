@@ -1,4 +1,5 @@
 let header = document.getElementById("header");
+let progressBarContainer = document.querySelector(".scroll-progress-container");
 let logo = document.getElementById("logo");
 let btnMenu = document.getElementById("btnMenu");
 let nav = document.querySelector("nav");
@@ -10,6 +11,7 @@ const minHeader = () => {
     document.body.scrollTop > 200 ||
     document.documentElement.scrollTop > 200
   ) {
+    progressBarContainer.style.display = "block";
     if (window.matchMedia("(max-width: 576px)").matches) {
       header.style.backgroundColor = "#05080fee";
     } else if (window.matchMedia("(max-width: 768px)").matches) {
@@ -19,6 +21,7 @@ const minHeader = () => {
       header.style.backgroundColor = "#05080fee";
     }
   } else {
+    progressBarContainer.style.display = "none";
     if (window.matchMedia("(max-width: 576px)").matches) {
       header.style.backgroundColor = "#05080f00";
     } else if (window.matchMedia("(max-width: 768px)").matches) {
@@ -60,3 +63,14 @@ const moMenu = () => {
 };
 
 btnMenu.addEventListener("click", moMenu);
+
+function showScrollProgress() {
+  let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  let height =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+  let scrolled = (winScroll / height) * 100;
+  document.getElementById("scrollBar").style.width = scrolled + "%";
+}
+
+document.addEventListener("scroll", showScrollProgress);
